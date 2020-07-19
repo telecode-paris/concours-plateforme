@@ -1,0 +1,24 @@
+extends layout.pug
+
+block content
+    .grid-container
+        h2 Tableau des scores
+        hr
+
+        include time.pug
+
+        if teams
+            table
+                thead
+                    tr
+                        th Rang
+                        th Équipe
+                        th Points
+                tbody
+                    each team, rank in teams
+                        tr
+                            td #{rank + 1}
+                            td #{team.team_name}
+                            td #{team.points}
+        else
+            p Aucune équipe n'a gagné de points pour l'instant.

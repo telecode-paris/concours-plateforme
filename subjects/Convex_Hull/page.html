@@ -1,0 +1,108 @@
+<h3> L'architecte et les villes du chaos </h3>
+<hr>
+<p>Après s'être levé, avoir petit-déjeuné, s'être brossé les écrous et enfilé de quoi ne pas rouiller, Tobi ouvre sa boîte à
+    missives. Aujourd'hui, contrairement à hier, il y a une lettre ! Il lit le contenu avec attention : un grand
+    architecte du roi a besoin de son aide et lui donne rendez-vous dans le bourg voisin.</p>
+
+<p>"Maître Tobi !", s'exclame-t-il en le voyant arriver, "Le royaume a encore une fois besoin de votre aide. Nous avons voulu fortifier une ville lointaine, mais nous avons des problèmes d'approvisionnement. Nous
+    voudrions savoir quelle quantité de matériels nous devrions acheminer là-bas le plus précisément
+    possible. Malheureusement, nous n'avons pas les plans de celle-ci. Nous avons simplement les coordonnées des différents
+    bâtiments qui les composent par rapport à leur place centrale en unité du royaume (URS). Connaissant la quantité de
+    matériaux par URS qu'il faut pour un mur, il nous faudrait
+    maintenant connaître le périmètre de la ville afin de savoir combien de matériaux acheminer !"</p>
+
+<p>"Je pense pouvoir vous aider, mais ne serait-il pas préférable d'arrondir la mesure à l'URS supérieure, pour être
+    certain d'en avoir assez ?", demande Tobi.</p>
+<p>"Parfait, vous nous rendez encore une fois un grand service messire !", répond gaiement l'architecte. </p>
+<p>"Laissez-moi faire !", déclare Tobi en se retournant, faisant virevolter sa cape imaginaire, avant de
+    s'atteler à la tâche.
+</p>
+
+<h4>Input :</h4>
+<p>N</br>N lignes de points représentés par deux entiers A et B espacés d'un espace.</p>
+<p>Avec :
+    <pre>
+2 &lt N &lt 10000
+-10000 &lt A &lt 10000
+-10000 &lt B &lt 10000</pre>
+</p>
+
+<h4>Output</h4>
+<p>Le périmètre du polygone simple de plus petit périmètre contenant tous les points, arrondit à l'entier supérieur.</p>
+
+<h4>Exemples</h4>
+<h5>Ex.1</h5>
+<p><strong>Input</strong></p>
+<pre>
+5
+0 0
+1 1
+0 2
+2 0
+2 2
+</pre>
+
+<p><strong>Output</strong></p>
+<pre>8</pre>
+
+<h5>Ex.2</h5>
+<p><strong>Input</strong></p>
+<pre>
+5
+0 4
+2 1
+5 4
+2 3
+1 0
+</pre>
+
+<p><strong>Output</strong></p>
+<pre>15</pre>
+
+<h5>Ex.3</h5>
+<p><strong>Input</strong></p>
+<pre>
+10
+-3 -1
+-5 -9
+-1 -2
+-6 4
+2 0
+-10 3
+-7 -6
+-6 6
+-1 -7
+-10 -2
+</pre>
+
+<p><strong>Output</strong></p>
+<pre>41</pre>
+
+<h5>Ex.4</h5>
+<p><strong>Input</strong></p>
+<pre>
+20
+35 66
+23 -21
+-30 -85
+-25 24
+23 -67
+-62 -10
+81 32
+-22 -28
+89 21
+25 -61
+-36 78
+-68 -70
+-63 -7
+56 -59
+29 36
+-27 -100
+-46 76
+13 -52
+73 60
+-71 40
+</pre>
+
+<p><strong>Output</strong></p>
+<pre>547</pre>

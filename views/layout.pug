@@ -1,0 +1,37 @@
+doctype html
+html
+    head
+        title #{title} | Concours IP7
+        link(rel="stylesheet", href="/app.css")
+        style.
+            pre {
+            background: #f6f6f6;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #dbdbdb;
+            }
+
+            .top-bar {
+            margin-bottom: 20px;
+            }
+    body
+        .top-bar
+            .top-bar-left
+                ul(class='menu')
+                    li(class='menu-text') Tobi's contest
+            .top-bar-right
+                ul(class='menu')
+                    li
+                        a(href='/info') Informations utiles
+                    li
+                        a(href='/leaderboard') Tableau des scores
+                    li
+                        a(href='/dashboard') Problèmes
+                    if connected
+                        li
+                            a(href='/logout') Déconnexion
+                    else
+                        li
+                            a(href='/') Accueil
+
+    block content

@@ -1,0 +1,39 @@
+<h3> Trop de routes ! </h3>
+<hr>
+
+<p>Le grand architecte du roi a encore du travail pour Tobi ! Il a besoin de calculer le temps moyen de déplacement dans le royaume, sachant que toutes les villes sont reliées par des routes les unes aux autres et qu'il n'y a qu'un seul et unique chemin (suite de route) allant d'une ville à une autre. De plus, certaines routes du royaume sont réparées (donc leur temps diminue) et d'autres se dégradent (donc leur temps augmente). L'architecte veut connaître le temps moyen de déplacement au jour le jour, Tobi doit donc trouver la valeur après chaque modification du réseau routier.</p>
+
+<h4>Entrée:</h4>
+<p>
+Un entier N (2 &le; N &le; 10^6) correspondant au nombre de villes.</br>
+N - 1 lignes de la forme "A B W" où A et B sont deux villes distinctes (1 &le; A, B &le; N, A &ne; B) et W le temps de déplacement entre les deux (0 &le; W &le; 10^5).</br>
+Un entier Q (1 &le; Q &le; 10^5) correspondant au nombre de modifications de temps de déplacement.</br>
+Q lignes de la forme "E L" où E est la position dans la liste précédente de la route modifiée (1 &le; E &le; N - 1) et L le nouveau temps de déplacement par cette route (0 &le; L &le; 10^5).
+</p>
+
+<h4>Sortie:</h4>
+<p>
+    Une première ligne contenant la moyenne des temps de déplacement entre deux villes distinctes comptées de manière unique (A &rarr; B et B &rarr; A ne sont comptées qu'une seule fois).
+    </br>
+    Q lignes contenant chacune la nouvelle moyenne des temps de déplacement dans le royaume en prenant en compte les modifications.
+    </br>
+    On affichera les résultats avec 6 décimales et en arrondissant la 6e vers la réponse exacte.
+</p>
+
+<h4>Exemple</h4>
+<p><strong>Entrée</strong></p>
+<pre>
+3
+1 2 5
+3 1 4
+2
+1 2
+1 3
+</pre>
+
+<p><strong>Sortie</strong></p>
+<pre>
+6.000000
+4.000000
+4.666667
+</pre>

@@ -1,0 +1,79 @@
+extends layout.pug
+
+block content
+    - started = data.start * 1000 < Date.now()
+
+    .grid-container
+        if started
+            section !{prob.problem_description}
+
+        include time.pug
+
+        if started
+            if connected
+                h4 Vos scores
+            else
+                h4 Les tests
+
+            hr
+            table(id='test-table')
+                thead
+                    tr
+                        th
+                        th Points
+                        th Temps limite
+                        if connected
+                            th Statut
+                            th Dernière soumission
+                tbody
+                    each test, rank in tests
+                        tr
+                            td Test #{rank + 1}
+                            td #{test.test_points}
+                            if test.execution_time
+                                td #{test.execution_time}/#{test.test_time}
+                            else
+                                td #{test.test_time}
+                            case test.status
+                                when null
+                                    td Aucune soumission
+                                when 0
+                                    td OK
+                                when 1
+                                    td FAILED
+                                when 2
+                                    td COMPILE_ERROR
+                                when 3
+                                    td RUNTIME_ERROR
+                                when 4
+                                    td TIMED_OUT
+                                when 5
+                                    td OUT_OF_MEMORY
+                            td
+                                if test.submission_date != null
+                                    span #{test.submission_date}
+
+            if connected && (Date.now() < deadline)
+
+                .grid-x
+                    .cell.medium-12
+                        h3 Soumettre votre solution
+                    .cell.small-3
+                        form(method='POST', action='/problem/' + prob.problem_id + '#test-table', id='submit-form', enctype='multipart/form-data')
+                            label(for='file') Fichier source
+                                if errors && errors.code
+                                    .alert.alert-box #{errors.code.msg}
+                                input(type='file', name='file', id='input-file', class='button')
+                            label Language
+                                if errors && errors.lang
+                                    .alert.alert-box #{errors.lang.msg}
+                                select(name='lang', id='input-lang')
+                                    option(value='java') Java
+                                    option(value='python') Python3
+                                    option(value='ocaml') OCaml
+                                    option(value='c') C
+                                    option(value='c++') C++
+                            input(type='hidden', name='problem', value=prob.id)
+                            input(type='submit', value='Soumettre', class='primary button')
+
+                script(src='/app.js')

@@ -1,0 +1,54 @@
+<h3> Une très belle mosaïque </h3>
+<hr>
+
+<p>Alors que Tobi se trouve en forêt pour ramasser des champignons, un grand craquement se fait entendre suivit d'un flash lumineux. Un peu aveuglé, notre mascotte favorite voit devant lui un grand personnage en robe bleue avec des étoiles. Il s'agit de l'archimage de l'Académie des sorciers. Ce dernier prend la parole d'une voix hors d'âge:</p>
+
+<p>"Petit robot, l'Académie a besoin de ton aide ! Nous prévoyons de construire une gigantesque mosaïque dans la grande salle. Nous avons déjà toutes les parties qui la composeront mais malheureusement nous ne savons pas la surface que l'ensemble occupera une fois réuni. Nous ne pouvons donc pas savoir la quantité de colle qu'il nous faudra ! Peux-tu nous aider à calculer tout ça ? Les stagiaires que nous avons mis sur le problème sont partis en congés maladie (il s'étaient mis à réciter des formules trigonométriques pendant leur sommeil) et notre budget a été coupé..."</p>
+
+<p>Pressentant qu'il est toujours bon de rendre service à un archimage (ou, en tout cas, il n'est pas recommandé de refuser), Tobi met son cerveau positronique en marche...</p>
+
+<h4>Input:</h4>
+<p>Une ligne contenant un entier N (1 &le; N &le; 1000) correspondant au nombre de tesselles (les polygones constituant la mosaïque).</br>
+N ensembles de lignes de la forme:</br>
+Sur une première ligne un entier P correspondant au nombre de sommets de la tesselle.</br>
+P lignes contenant chacune deux entiers ai et bi (0 &le; ai, bi &le; 10^6) séparés par un espace, correspondant aux coordonnées d'un des sommets de la tesselle.</br>
+Les sommets de la tesselle sont donnés les uns après les autres (il y a une arête entre chaque paire de sommets consécutifs et une entre le premier et le dernier sommet). La tesselle est réaliste (ses arêtes ne s'intersectent pas). Les tesselles sont bien sûr disjointes deux à deux.</p>
+
+<h4>Output</h4>
+<p>L'aire totale des tesselles, arrondie à l'entier inférieur.</p>
+
+<h4>Exemples</h4>
+<p><strong>Input</strong></p>
+<pre>
+1
+4
+0 0
+1 0
+1 1
+0 1
+</pre>
+
+<p><strong>Output</strong></p>
+<pre>
+1
+</pre>
+
+<p><strong>Input</strong></p>
+<pre>
+2
+5
+98 35
+79 90
+21 90
+2 36
+50 0
+3
+0 0
+20 0
+0 20
+</pre>
+
+<p><strong>Output</strong></p>
+<pre>
+6100
+</pre>

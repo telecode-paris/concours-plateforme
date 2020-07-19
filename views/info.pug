@@ -1,0 +1,45 @@
+extends layout.pug
+
+block content
+    .grid-container
+        h2 Quelques information utiles
+
+        ol
+            li
+                a(href='#deroulement') Déroulement du concours
+            li
+                a(href='#rules') Règles générales
+            li
+                a(href='#std') Comment lire l'entrée standard
+
+
+        include time.pug
+
+        section
+            h4(id='deroulement') Déroulement du concours
+            p Le but du concours est de résoudre le plus de problèmes possibles. Plus le problème est difficile plus le nombre de points marqué est conséquent. La solution rapporte des points en fonction de la taille des entrées qu'elle est capable de traiter. Pour chaque problème, il y a une séquence de tests classé par taille croissante qui rapporte de plus en plus de points. Bien sûr, il y a un temps limite pour chaque entrée et il est proportionnel à la taille de cette dernière. Pour avoir les points à un test, il faut que votre programme renvoie une sortie correcte à tous ceux qui le précède.
+
+            p Vous pouvez résoudre les problèmes dans l'ordre que vous voulez.
+
+        section
+            h4(id='rules') Règles générales
+            p Ce concours est organisé à l'initiative d'IP7. Nous pouvons organiser ce concours grâce à l'aide du SCRIPT de l'université Paris Diderot. Nous vous demandons donc de respecter les lieux et vous respecter les uns les autres. Le but est de s'amuser, ensemble. Vous avez accès à l'ensemble d'Internet et aux moteurs de recherches tels que Google ou Ecosia (c'est plus écologique). Vous pouvez réutiliser des codes déjà existants sans aucun problème. Il n'y a aucune limite tant que cela reste respectueux et dans une bonne ambiance. Bon courage !
+
+        section
+            h4(id='std') Comment lire l'entrée standard
+            p Toutes les entrées pour les problèmes sont fournis directement dans l'entrée standard. Le format d'entre est toujours garanti correct, il n'est donc pas nécessaire de perdre du temps avec des tests a la lecture.
+
+            p Voici comment lire des programmes de base pour lire l'entrée standard dans les langages autorises
+
+            p
+                strong C
+                include c-std.html
+
+                strong Java
+                include java-std.html
+
+                strong Python
+                include python-std.html
+
+                strong Ocaml
+                include ocaml-std.html

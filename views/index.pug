@@ -1,0 +1,26 @@
+extends layout.pug
+
+block content
+    .grid-container
+        h2 #{text}
+        hr
+
+        if alert
+            .alert-box.alert #{alert}
+
+        h4 Rejoindre votre équipe
+        .grid-x.grid-margin-x
+            .cell.small-5
+                form(method='post', action='/login')
+                    label(for='team') Nom
+                        if loginErrors && loginErrors.team
+                            .alert.alert-box #{loginErrors.team.msg}
+                    input(type='text', name='team')
+                    label(for='password') Mot de passe
+                        if loginErrors && loginErrors.password
+                            .alert.alert-box #{loginErrors.password.msg}
+                        input(type='password', name='password')
+                    input(type='submit', class='button primary', value='Connexion')
+            .cell.small-7
+                p Missive du bureau d'IP7
+                p Tobi, notre mascotte, a décidé de partir en vacances (bien méritées) à la découverte d'un monde magique. Ce monde merveilleux est rempli de personnes, de bêtes et de lieux très étranges qui risquent de compliquer ce repos qu'il planifie depuis des mois. Tobi a donc fait appel à vous: acceptez-vous de l'aider afin qu'il puisse profiter un peu de ses vacances ? Pour mener à bien cette mission, vous devrez passer une série d'épreuves dans l'ordre que vous le souhaitez. Pour commencer, vous devez vous connecter au HUB pour continuer l'aventure.

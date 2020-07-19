@@ -1,0 +1,17 @@
+extends layout.pug
+
+block content
+      .grid-container
+          h2 Tous les problèmes
+          hr
+
+          include time.pug
+
+          .grid-x.grid-margin
+              -
+                  var difficultyLabel = ['basse', 'moyenne', 'élevée']
+              each problem in problems
+                div.cell.small-2
+                    h3
+                        a(href='problem/' + problem.problem_id) #{problem.problem_name}
+                    p Difficulté #{difficultyLabel[problem.problem_difficulty]}

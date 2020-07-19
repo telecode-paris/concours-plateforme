@@ -1,0 +1,22 @@
+-
+    time = Date.now()
+    deadline = data.deadline * 1000
+    start = data.start * 1000
+
+input(type='hidden', value=start, id='start-input')
+input(type='hidden', value=deadline, id='deadline-input')
+
+if deadline < time
+    .callout.alert Le concours est terminé
+else if start > time
+    -
+        d = new Date(start - time)
+        str = " " + d.getUTCHours() + "h " + d.getUTCMinutes() + "mins " + d.getUTCSeconds() + "sec"
+    .callout.warning#time Le concours n'a pas encore commencé. Il commence dans #{str}.
+else
+    -
+        d = new Date(deadline - time)
+        str = " " + d.getUTCHours() + "h " + d.getUTCMinutes() + "mins " + d.getUTCSeconds() + "sec"
+    p.callout.primary#time Temps restant: #{str}
+br
+script(src='/app-leaderboard.js')
