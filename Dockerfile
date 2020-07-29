@@ -56,7 +56,7 @@ RUN \
 RUN \
         yaourt -S --noconfirm \
             camisole-git \
-            jdk10-openjdk ocaml \
+            jdk11-openjdk ocaml \
             isolate-git
 
 # Install camisole
@@ -72,6 +72,7 @@ RUN \
 COPY package.json .
 
 RUN npm install
+RUN npm i request --save
 
 # add subjects and website
 COPY static static
