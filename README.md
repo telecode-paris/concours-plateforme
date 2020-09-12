@@ -8,6 +8,8 @@ Clonée depuis la plate-forme utilisée par IP7 (association d'informatique de P
 
 Pour cette raison des mentions de IP7 ou de membres d'IP7 peuvent apparaître dans le dépôt.
 
+Les sujets sont ceux du concours 2020 d'IP7, ils sont laissés là en tant qu'exemples du format de sujet.
+
 ## Comment utiliser ?
 Une (très grosse) image docker a été prévue pour déployer le site partout. Pour lancer l'image et accéder au site sur le port `8080`:
 
